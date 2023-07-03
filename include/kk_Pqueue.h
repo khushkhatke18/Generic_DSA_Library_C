@@ -16,4 +16,6 @@ void *elementAtFrontofPQueue (PQueue  *pQueue, bool *success);
 bool  isPQueueEmpty(PQueue  *pQueue);
 void clearPQueue (PQueue  *pQueue);
 void destroyPQueue (PQueue  *pQueue);
+void *getElementFromPQueue(PQueue *pqueue , int index , int *success);
+void UpdateElementInPQueue( PQueue *pqueue , int index , void *element , int *success);
 #endif
