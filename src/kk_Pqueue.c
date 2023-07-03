@@ -73,5 +73,19 @@ if(pQueue==NULL) return;
 destroyHeap(pQueue->heap);
 free(pQueue);
 }
+void *getElementFromPQueue(PQueue *pqueue , int index , int *success)
+{
+void *element = NULL;
+if(success) *success = false;
+if(pqueue == NULL) return element;
+element = getElementFromHeap(pqueue->heap , index , success);
+return element;
+}
+void UpdateElementInPQueue( PQueue *pqueue , int index , void *element , int *success)
+{
+if(success) *success = false;
+if(pqueue == NULL) return;
+updateElementInheap( pqueue->heap , index , element , success);
+}
 #endif
 
